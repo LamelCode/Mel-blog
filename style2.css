@@ -1,0 +1,171 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Nunito Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #484848;
+  text-align: left;
+  background-color: #fff;
+}
+/* page layout grid style */
+.wrapper {
+  display: grid;
+  justify-content: center;
+  grid-template-rows: auto auto auto auto auto;
+  grid-template-columns: repeat(8, 1fr);
+}
+.header-container {
+  grid-column: 1 / 9;
+  background-color: rgb(197, 49, 49);
+}
+.intro-sec {
+  grid-column: 1 /6;
+  background-image: /*linear-gradient(to top, rgb(133, 29, 65), rgb(51, 51, 102)), */ url(/resources/css/images/profile-blog-Mel.png);
+  background-size: cover;
+  height: 640px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.about-me {
+  background-color: #851d41;
+}
+.quote-sec {
+  grid-column: 6/9;
+  text-align: center;
+}
+.img-quote {
+  display: inline-block;
+  margin: 50px 0;
+}
+
+.quote-txt {
+  width: 200px;
+  margin-left: 175px;
+}
+
+.quote1 {
+  font-family: "Oswald", sans-serif;
+  font-size: 30px;
+  margin: 0;
+}
+.quote2 {
+  font-family: "Oswald", sans-serif;
+  font-size: 25px;
+  margin: 10px 0 0 0;
+}
+
+.author {
+  font-family: "Bilbo Swash Caps", cursive;
+  font-size: 25px;
+}
+
+/* Header Style */
+.header-container,
+.left-header-sec,
+.social-sec {
+  display: flex;
+}
+.left-header-sec,
+.social-sec {
+  align-items: center;
+}
+
+.social-sec {
+  justify-content: flex-end;
+  padding: 0 25px;
+}
+.social-sec > div {
+  width: 50px;
+}
+.header-container {
+  background-color: #fff;
+  box-shadow: 0 2px 4px 0 #dee3e2;
+}
+/* Give an equal amount of space for each div in the header container.  Mking it to stretch */
+.header-container > div {
+  flex: 1;
+}
+/* Makes the left header sec twice bigger than the right(social media) section */
+.header-container > .left-header-sec {
+  flex: 2;
+}
+
+.ysc-logo {
+  width: auto;
+  height: auto;
+}
+
+.txt-head {
+  text-decoration: none;
+  color: #333366;
+  font-weight: 500;
+  font-size: 14px;
+}
+.avatar {
+  width: 50%;
+  height: auto;
+}
+
+/*blog section styling*/
+
+@media all and (max-width: 768px) {
+  .header-container {
+    flex-wrap: wrap;
+  }
+  .header-container > div:nth-child(1) {
+    flex-basis: 100%;
+  }
+  .header-container > div {
+    flex: none;
+  }
+  .left-header-sec {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .intro-sec,
+  .quote-sec {
+    grid-column: 1 /9;
+  }
+  .quote-txt {
+    width: 300px;
+  }
+}
+
+/* Medium Screens */
+@media (min-width: 769px) and (max-width: 1200px) {
+  /* .header-container {
+    flex-wrap: wrap;
+  }
+  .header-container > div:nth-child(1) {
+    flex-basis: 100%;
+  } */
+  .header-container > div {
+    flex: none;
+  }
+  .intro-sec {
+    grid-column: 1 /5;
+  }
+  .quote-sec {
+    grid-column: 6/9;
+  }
+  .quote1 {
+    font-size: 25px;
+  }
+  .quote-sec {
+    margin-right: 90px;
+  }
+
+  .quote-txt {
+    margin-left: 40px;
+  }
+}
+
+/* Use it to test then delete */
+
+.left-header-sec > div {
+  padding: 20px;
+}
